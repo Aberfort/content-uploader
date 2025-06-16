@@ -1,0 +1,13 @@
+{
+  "name": "vendor/content-uploader",
+  "description": "A plugin that uploads and imports content from ZIP archives with multi-language support (WPML).",
+  "type": "wordpress-plugin",
+  "autoload": {
+    "psr-4": {
+      "ContentUploader\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.4"
+  }
+}

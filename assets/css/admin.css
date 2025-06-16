@@ -1,0 +1,109 @@
+/* Стилізація прогрес-бару */
+.progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 20px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #28a745;
+  transition: width 0.4s ease;
+}
+
+/* Стилізація спіннера */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #0073aa;
+  animation: spin 1s linear infinite;
+  margin: 20px auto; /* Додано відступ для кращого розташування */
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Стилізація консолі логів */
+#cu-console {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  padding: 10px;
+  font-family: monospace;
+}
+
+#cu-console p {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+/* Відображення поточного пакету */
+#current-batch {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Стилізація кнопки при відключенні */
+.button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Стилізація заголовків */
+#import-progress h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Стилізація повідомлень у консолі */
+#cu-console p.error {
+  color: #dc3545;
+}
+
+#cu-console p.success {
+  color: #28a745;
+}
+
+#cu-console p.info {
+  color: #17a2b8;
+}
+
+/* Покращена адаптивність */
+@media (max-width: 600px) {
+  #import-progress {
+    padding: 10px;
+  }
+
+  .progress-container {
+    height: 15px;
+  }
+
+  .spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+
+  #cu-console {
+    max-height: 200px;
+  }
+}
+
+/* Стилізація повідомлень */
+#cu-console p {
+  border-bottom: 1px solid #eaeaea;
+}
+
+#cu-console p:last-child {
+  border-bottom: none;
+}
